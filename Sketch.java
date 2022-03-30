@@ -50,10 +50,10 @@ public class Sketch extends PApplet {
     //create gradient in bottom left quadrant
     for(int i = 0; i <= width / 2; i++){
       stroke(i+ width / 255, i+ width / 255, i+ width / 255);
-      line(i + width / 255, height /2 , i +  width / 255, height);
+      line(i, height /2 , i, height);
     }
 
-    // 
+    // create flower in the bottom right quadrant 
     pushMatrix();
     translate(width * 3 / 4, height * 3 / 4);
 
@@ -70,6 +70,7 @@ public class Sketch extends PApplet {
     }
     popMatrix();
 
+    // place pistal of the flower in bottom right quadrant
     fill(255,255,0);
     ellipse(width * 3 / 4, height * 3 / 4, width / 10, height / 10);
   
