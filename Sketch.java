@@ -6,8 +6,8 @@ public class Sketch extends PApplet {
   float fltCirclesX;
   float fltCirclesY;
   int intAngle;
-  float angles = (float)Math.PI;
-  float i = (float)Math.PI * 3 / 4;
+  float angles;
+  float i;
 	
   /**
    * Called once at the beginning of execution, put your size all in this method
@@ -41,7 +41,7 @@ public class Sketch extends PApplet {
 
     // Place 5 x 5 circles along top right quadrant 
     for(fltCirclesX = width * 55 / 100; fltCirclesX <= width; fltCirclesX += width / 10){
-      for(fltCirclesY = height / 20; fltCirclesY <= height / 2; fltCirclesY += height /10){
+      for(fltCirclesY = height / 20; fltCirclesY <= height / 2; fltCirclesY += height / 10){
         fill(102, 0, 153);
         ellipse(fltCirclesX, fltCirclesY , width / 12, width / 12);
       }
@@ -54,6 +54,9 @@ public class Sketch extends PApplet {
     }
 
     // create flower in the bottom right quadrant 
+
+    angles =  (float)Math.PI;
+
     pushMatrix();
     translate(width * 3 / 4, height * 3 / 4);
 
@@ -62,6 +65,7 @@ public class Sketch extends PApplet {
       ellipse(0,0, width /10, height / 3);
 
       angles = angles + i;
+      i = (float)Math.PI * 3 / 4;
 
       if (angles >= 2 * Math.PI){
         angles = (float)Math.PI;
