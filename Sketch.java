@@ -1,5 +1,10 @@
 import processing.core.PApplet;
 
+ /**
+  * Description: a code to print a frid of squares, array of circles, grandient, and print a flower using for loops
+  * @author: Jenusan y
+  */
+
 public class Sketch extends PApplet {
   // Initializing variables
   float fltLines;
